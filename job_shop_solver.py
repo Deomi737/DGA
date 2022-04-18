@@ -9,9 +9,10 @@ import simulator.simulator as Simulator
 import os
 import time
 
-from helper import convert_for_simulation, average, addHintsSpread
-import solver.job_shop_solver_methods as jsm
+from solver.helper import convert_for_simulation, average, addHintsSpread
 from solver.enums import Method
+import solver.job_shop_solver_methods as jsm
+
 
 # save np.load
 np_load_old = np.load

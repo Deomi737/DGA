@@ -9,8 +9,10 @@ np_load_old = np.load
 
 # modify the default parameters of np.load
 np.load = lambda *a,**k: np_load_old(*a, allow_pickle=True, **k)
-import graph_generator
+
+from generation import graph_generator 
 from solver.helper import longest_path_value
+
 
 # Return all nodes with no critical resource allocated
 def get_normal_nodes(task):
@@ -310,7 +312,7 @@ def main(argv):
 
                 # Take default period
                 if period_mode == 0:
-                    task = set_util(task, util_mode, normal_util, critical_util, period)
+                    task = set_util(task, util_mode, normal_util, critical_util, period, mode)
                 # Get a random period from the predefined ranges
                 elif period_mode == 1:
                     period = period_rand_sel[np.random.randint(0, period_rand_len)]

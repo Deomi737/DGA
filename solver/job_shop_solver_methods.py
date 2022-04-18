@@ -1,5 +1,5 @@
 from ortools.sat.python import cp_model
-from helper import get_predecessors
+from solver.helper import get_predecessors
 
 def init_globals(integer_multiplier_value, periods_value, horizon_value):
     global integer_multiplier
